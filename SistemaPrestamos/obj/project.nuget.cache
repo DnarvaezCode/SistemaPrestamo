@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "UOglkevDik1IKgVyaj2NuJ6c6cxOSdC4KHYT9K9I2mesLOL/aVuPJYd2xtqUMcigPB6mf2yK2rsMaL9J5UlLDw==",
+  "dgSpecHash": "Ne4ClwY957ds0A5oYVDeYcIOTXiWdPqVC6QeaN0EYZaCChQub6wlNFle1vN8YS/KtrskMvAZ7xf28XCUOQjSuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dnarvaez\\source\\repos\\SistemaPrestamos\\SistemaPrestamos\\SistemaPrestamos.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dnarvaez\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Dnarvaez\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.0\\microsoft.aspnetcore.mvc.razor.extensions.5.0.0.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.0\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.0.nupkg.sha512",
@@ -75,7 +77,7 @@
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\Dnarvaez\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

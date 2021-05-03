@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SistemaPrestamos.Context;
+using SistemaPrestamos.Models;
+using SistemaPrestamos.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,11 @@ namespace SistemaPrestamos
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PrestamosContext>(option=> option.UseSqlServer(Configuration.GetConnectionString("DefaultConetionstring")));
+            services.AddAutoMapper(configuration =>
+            {
+                configuration.CreateMap<Cliente, ClienteDTO>();
+                configuration.CreateMap<ClienteDTO, Cliente>();
+            }, typeof(Startup));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 

@@ -387,3 +387,8 @@ C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\bin\Debug\net5.
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\SistemaPrestamos.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\bin\Debug\net5.0\libman.json
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Cliente\Create.cshtml.g.cs
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Cliente\Delete.cshtml.g.cs
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Cliente\Edit.cshtml.g.cs

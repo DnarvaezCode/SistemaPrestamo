@@ -1,0 +1,71 @@
+﻿@model SistemaPrestamos.Models.DTOs.ClienteDTO
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<div class="card mt-5">
+    <div class="card-header bg-dark text-light ml-0 row container">
+        <div class="col-md-6">
+            <i class="fa fa-save"></i>&nbsp;Eliminar Cliente
+        </div>
+        <div class="col-md-6 text-right"> </div>
+    </div>
+    <div class="card-body">
+        <form class="mt-2" method="post" asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="row">
+                <div class="col-8">
+                    <div class="form-group row">
+                        <div class="col-4">
+                            <label asp-for="@Model.Nombre" class="col-form-label"></label>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" asp-for="@Model.Nombre" readonly/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4">
+                            <label asp-for="@Model.Cedula" class="col-form-label"></label>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" asp-for="@Model.Cedula" readonly/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4">
+                            <label asp-for="@Model.CodigoPink" class="col-form-label"></label>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" asp-for="@Model.CodigoPink" readonly/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4">
+                            <label asp-for="@Model.Telefono" class="col-form-label"></label>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" asp-for="@Model.Telefono" readonly/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4">
+                            <label asp-for="@Model.Direccion" class="col-form-label"></label>
+                        </div>
+                        <div class="col-8">
+                            @Html.TextAreaFor(x => x.Direccion, new { @class = "form-control", @readonly = "true" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                            <input type="submit" class="btn btn-danger form-control" value="Eliminar" />
+                        </div>
+                        <div class="col-4">
+                            <a asp-action="Index" class="btn btn-success form-control">Regresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
