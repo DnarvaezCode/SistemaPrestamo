@@ -59,27 +59,13 @@
                         <th>Opciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>07854</td>
-                        <td>1200.00</td>
-                        <td>8%</td>
-                        <td>80</td>
-                        <td>
-                            <div class="btn-group">
-                                <a asp-action="Edit" title="Editar"
-                                   class="btn btn-info btn-sm text-white"><i class="fa fa-pencil"></i></a>
-                                <a asp-action="Delete" title="Eliminar"
-                                   class="btn btn-danger btn-sm text-white"><i class="fa fa-trash"></i></a>
-                            </div>
-                        </td>
-                    </tr>
+                <tbody id="comisiones">
                 </tbody>
             </table>
         </div>
         <div class="btn-group pull-right">
             <a asp-action="Index" asp-controller="Home" class="btn btn-danger pull-right">Cancelar</a>&nbsp;
-            <a asp-action="Index" asp-controller="Home" class="btn btn-primary pull-right">Guardar</a>
+            <button class="btn btn-primary pull-right">Guardar</button>
         </div>
     </div>
 </div>
