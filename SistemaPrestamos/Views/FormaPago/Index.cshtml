@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SistemaPrestamos.Models.DTOs.ClienteDTO>
+﻿@model IEnumerable<SistemaPrestamos.Models.DTOs.FormaPagoDTO>
 @{
     ViewData["Title"] = "Listar";
 }
@@ -6,10 +6,10 @@
 <div class="card" style="margin-top:30px">
     <div class="card-header bg-dark text-light ml-0 row container">
         <div class="col-md-6">
-            <i class="fa fa-list-ul"></i>&nbsp;Clientes
+            <i class="fa fa-list-ul"></i>&nbsp;Forma de Pago
         </div>
         <div class="col-md-6 text-right">
-            <a asp-action="Create" asp-controller="Cliente" class="btn btn-primary btn-sm text-white"><i class="fa fa-plus"></i></a>
+            <a asp-action="Create" asp-controller="FormaPago" class="btn btn-primary btn-sm text-white"><i class="fa fa-plus"></i></a>
         </div>
     </div>
     <div class="card-body">
@@ -20,10 +20,6 @@
                     <thead>
                         <tr>
                             <th>@Html.DisplayNameFor(x => x.Nombre)</th>
-                            <th>@Html.DisplayNameFor(x => x.Cedula)</th>
-                            <th>@Html.DisplayNameFor(x => x.CodigoPin)</th>
-                            <th>@Html.DisplayNameFor(x => x.Telefono)</th>
-                            <th>@Html.DisplayNameFor(x => x.Direccion)</th>
                             <th>@Html.DisplayNameFor(x => x.Estado)</th>
                             <th>Opciones</th>
                         </tr>
@@ -33,10 +29,6 @@
                         {
                             <tr>
                                 <td>@item.Nombre</td>
-                                <td>@item.Cedula</td>
-                                <td>@item.CodigoPin</td>
-                                <td>@item.Telefono</td>
-                                <td>@item.Direccion</td>
                                 <td><span class='badge @(item.Estado ? "badge-success": "badge-danger")'> @(item.Estado ? "Activo":"Inactivo")</span></td>
                                 <td>
                                     <div class="btn-group">

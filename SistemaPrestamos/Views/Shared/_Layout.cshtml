@@ -22,8 +22,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mantenimientos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Cliente" asp-action="Index">Clientes</a>
+                                <a class="dropdown-item" asp-controller="FormaPago" asp-action="Index">Forma de Pagos</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-controller="EstadoPrestamo" asp-action="Index">Estado de Préstamos</a>
+                            </div>
                         </li>
                     </ul>
                 </div>

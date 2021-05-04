@@ -13,6 +13,7 @@
     <div class="card-body">
         <form class="mt-2" method="post" asp-action="Edit">
             <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Estado" />
             <div class="row">
                 <div class="col-8">
                     <div class="form-group row">
@@ -35,11 +36,11 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-4">
-                            <label asp-for="@Model.CodigoPink" class="col-form-label"></label>
+                            <label asp-for="@Model.CodigoPin" class="col-form-label"></label>
                         </div>
                         <div class="col-8">
-                            <input class="form-control" asp-for="@Model.CodigoPink" />
-                            <span asp-validation-for="@Model.CodigoPink" class="text-danger"></span>
+                            <input class="form-control" asp-for="@Model.CodigoPin" />
+                            <span asp-validation-for="@Model.CodigoPin" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="form-group row">

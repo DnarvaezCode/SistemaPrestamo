@@ -32,6 +32,10 @@ namespace SistemaPrestamos
             {
                 configuration.CreateMap<Cliente, ClienteDTO>();
                 configuration.CreateMap<ClienteDTO, Cliente>();
+                configuration.CreateMap<EstadoPrestamo, EstadoPrestamoDTO>();
+                configuration.CreateMap<EstadoPrestamoDTO, EstadoPrestamo>();
+                configuration.CreateMap<FormaPago, FormaPagoDTO>();
+                configuration.CreateMap<FormaPagoDTO, FormaPago>();
             }, typeof(Startup));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }

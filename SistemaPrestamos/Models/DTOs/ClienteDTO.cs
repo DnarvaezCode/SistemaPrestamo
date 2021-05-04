@@ -13,7 +13,7 @@ namespace SistemaPrestamos.Models.DTOs
         public string Nombre { get; set; }
         public string Cedula { get; set; }
         [Required(ErrorMessage = "El código pink es requerido.")]
-        public string CodigoPink { get; set; }
+        public string CodigoPin { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public bool Estado { get; set; }

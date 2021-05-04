@@ -60,7 +60,6 @@ namespace SistemaPrestamos.Controllers
             if (ModelState.IsValid)
             {
                 var cliente = mapper.Map<Cliente>(clienteDTO);
-                cliente.Estado = true;
                 context.Clientes.Update(cliente);
                 await context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
