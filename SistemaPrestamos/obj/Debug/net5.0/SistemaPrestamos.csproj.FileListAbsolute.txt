@@ -399,3 +399,5 @@ C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\ref\SistemaPrestamos.dll
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\SistemaPrestamos.pdb
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\SistemaPrestamos.genruntimeconfig.cache
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\SistemaPrestamos.csprojAssemblyReference.cache
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Comisione\Index.cshtml.g.cs
