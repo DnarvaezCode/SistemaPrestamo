@@ -10,30 +10,43 @@
         </div>
     </div>
     <div class="card-body">
-        <input type="hidden" id="txtMontoPrestamo" />
         <div class="mt-4">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Empleado</label>
+                    <label for="inputEmail4">Nombre del Socio</label>
                     <input type="text" class="form-control" asp-for="Nombre" readonly>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>% Prestamo</label>
-                    <input type="text" class="form-control" id="txtPorcentaje" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                    <label for="inputState">Nº de Préstamos</label>
+                    @Html.DropDownList("ComboboxPrestamo", new SelectList(Model.Prestamos, "Id", "Codigo"), "-- Seleccione un número de préstamo--", new { @class = "form-control" })
+                    <span class="text-danger"></span>
                 </div>
             </div>
-
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputState">Prestamos</label>
-                    @Html.DropDownList("ComboboxPrestamo", new SelectList(Model.Prestamos, "Id", "Codigo"), "-- Seleccione un prestamo--", new { @class = "form-control" })
+                    <label>Monto del Préstamo</label>
+                    <input type="text" class="form-control" id="txtMontoPrestamo" readonly>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Estado de la Comisión</label>
+                    <input type="text" class="form-control" id="txtEstadoComision" readonly>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>% Préstamo</label>
+                    <input type="text" class="form-control" id="txtPorcentaje"
+                           onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"
+                           onchange="ValidateInput(this)"
+                           onblur="ValidateInput(this)">
+                    <span class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Comisión</label>
                     <input type="text" class="form-control" id="txtComision" readonly>
                 </div>
             </div>
-            <button type="button" class="btn btn-info pull-right">Agregar</button>
+            <button type="button" class="btn btn-info pull-right" id="btnAgregar">Agregar</button>
         </div>
         <div class="mt-5">
             <table class="table table-bordered">
@@ -41,7 +54,7 @@
                     <tr>
                         <th>Nº Préstamo</th>
                         <th>Monto del Prestamo</th>
-                        <th>% Prestamo</th>
+                        <th>% Préstamo</th>
                         <th>Comisión</th>
                         <th>Opciones</th>
                     </tr>

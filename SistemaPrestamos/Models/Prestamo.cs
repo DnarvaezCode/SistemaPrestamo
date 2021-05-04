@@ -14,12 +14,12 @@ namespace SistemaPrestamos.Models
         public DateTime Fecha { get; set; }
         public int ClienteId { get; set; }
         public int FormaPagoId { get; set; }
-        public int EstadoPrestamoId { get; set; }
+        public string EstadoPrestamo { get; set; }
+        public string EstadoComision { get; set; }
         public Cliente Cliente { get; set; }
         public FormaPago FormaPago { get; set; }
         public List<Abono> Abonos { get; set; }
         public List<Comisione> Comisiones { get; set; }
-        public EstadoPrestamo EstadoPrestamo { get; set; }
         public bool Estado { get; set; }
     }
 }

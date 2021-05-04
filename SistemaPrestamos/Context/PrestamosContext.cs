@@ -17,6 +17,5 @@ namespace SistemaPrestamos.Context
         public DbSet<Prestamo> Prestamos { get; set; }
         public DbSet<FormaPago> FormaPagos { get; set; }
         public DbSet<Abono> Abonos { get; set; }
-        public DbSet<EstadoPrestamo> EstadoPrestamos { get; set; }
     }
 }

@@ -376,10 +376,7 @@ C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Cliente\Delete.cshtml.g.cs
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Cliente\Edit.cshtml.g.cs
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Cliente\Index.cshtml.g.cs
-C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\EstadoPrestamo\Create.cshtml.g.cs
-C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\EstadoPrestamo\Delete.cshtml.g.cs
-C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\EstadoPrestamo\Edit.cshtml.g.cs
-C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\EstadoPrestamo\Index.cshtml.g.cs
+C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Comisione\Index.cshtml.g.cs
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\FormaPago\Create.cshtml.g.cs
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\FormaPago\Delete.cshtml.g.cs
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\FormaPago\Edit.cshtml.g.cs
@@ -399,5 +396,3 @@ C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\ref\SistemaPrestamos.dll
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\SistemaPrestamos.pdb
 C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\SistemaPrestamos.genruntimeconfig.cache
-C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\SistemaPrestamos.csprojAssemblyReference.cache
-C:\Users\Dnarvaez\source\repos\SistemaPrestamos\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Comisione\Index.cshtml.g.cs

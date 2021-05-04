@@ -106,24 +106,6 @@ namespace SistemaPrestamos.Migrations
                     b.ToTable("Comisione");
                 });
 
-            modelBuilder.Entity("SistemaPrestamos.Models.EstadoPrestamo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EstadoPrestamos");
-                });
-
             modelBuilder.Entity("SistemaPrestamos.Models.FormaPago", b =>
                 {
                     b.Property<int>("Id")
@@ -158,8 +140,11 @@ namespace SistemaPrestamos.Migrations
                     b.Property<bool>("Estado")
                         .HasColumnType("bit");
 
-                    b.Property<int>("EstadoPrestamoId")
-                        .HasColumnType("int");
+                    b.Property<string>("EstadoComision")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EstadoPrestamo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
@@ -176,8 +161,6 @@ namespace SistemaPrestamos.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
-
-                    b.HasIndex("EstadoPrestamoId");
 
                     b.HasIndex("FormaPagoId");
 
@@ -222,12 +205,6 @@ namespace SistemaPrestamos.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SistemaPrestamos.Models.EstadoPrestamo", "EstadoPrestamo")
-                        .WithMany()
-                        .HasForeignKey("EstadoPrestamoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("SistemaPrestamos.Models.FormaPago", "FormaPago")
                         .WithMany()
                         .HasForeignKey("FormaPagoId")
@@ -235,8 +212,6 @@ namespace SistemaPrestamos.Migrations
                         .IsRequired();
 
                     b.Navigation("Cliente");
-
-                    b.Navigation("EstadoPrestamo");
 
                     b.Navigation("FormaPago");
                 });

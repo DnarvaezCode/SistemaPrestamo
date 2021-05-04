@@ -15,7 +15,7 @@ namespace SistemaPrestamos.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Cedula = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CodigoPink = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CodigoPin = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Estado = table.Column<bool>(type: "bit", nullable: false)
@@ -23,20 +23,6 @@ namespace SistemaPrestamos.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Clientes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "EstadoPrestamos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Estado = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EstadoPrestamos", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -65,7 +51,8 @@ namespace SistemaPrestamos.Migrations
                     Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ClienteId = table.Column<int>(type: "int", nullable: false),
                     FormaPagoId = table.Column<int>(type: "int", nullable: false),
-                    EstadoPrestamoId = table.Column<int>(type: "int", nullable: false),
+                    EstadoPrestamo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EstadoComision = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Estado = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -75,12 +62,6 @@ namespace SistemaPrestamos.Migrations
                         name: "FK_Prestamos_Clientes_ClienteId",
                         column: x => x.ClienteId,
                         principalTable: "Clientes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Prestamos_EstadoPrestamos_EstadoPrestamoId",
-                        column: x => x.EstadoPrestamoId,
-                        principalTable: "EstadoPrestamos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -163,11 +144,6 @@ namespace SistemaPrestamos.Migrations
                 column: "ClienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Prestamos_EstadoPrestamoId",
-                table: "Prestamos",
-                column: "EstadoPrestamoId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Prestamos_FormaPagoId",
                 table: "Prestamos",
                 column: "FormaPagoId");
@@ -186,9 +162,6 @@ namespace SistemaPrestamos.Migrations
 
             migrationBuilder.DropTable(
                 name: "Clientes");
-
-            migrationBuilder.DropTable(
-                name: "EstadoPrestamos");
 
             migrationBuilder.DropTable(
                 name: "FormaPagos");
