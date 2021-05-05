@@ -16,6 +16,7 @@ namespace SistemaPrestamos.Context
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Prestamo> Prestamos { get; set; }
         public DbSet<FormaPago> FormaPagos { get; set; }
+        public DbSet<Comisione> Comisiones { get; set; }
         public DbSet<Abono> Abonos { get; set; }
     }
 }

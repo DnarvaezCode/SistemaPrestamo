@@ -34,6 +34,8 @@ namespace SistemaPrestamos
                 configuration.CreateMap<ClienteDTO, Cliente>();
                 configuration.CreateMap<FormaPago, FormaPagoDTO>();
                 configuration.CreateMap<FormaPagoDTO, FormaPago>();
+                configuration.CreateMap<Comisione, ComisionDTO>();
+                configuration.CreateMap<ComisionDTO, Comisione>();
             }, typeof(Startup));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }

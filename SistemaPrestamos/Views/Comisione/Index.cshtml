@@ -1,4 +1,4 @@
-﻿@model SistemaPrestamos.Models.DTOs.PrestamoDTO
+﻿@model SistemaPrestamos.Models.DTOs.ComisionDTO
 @{
     ViewData["Title"] = "Listar";
 }
@@ -10,6 +10,7 @@
         </div>
     </div>
     <div class="card-body">
+        <input id="txtClienteId" type="hidden" asp-for="Id"/>
         <div class="mt-4">
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -47,6 +48,7 @@
                 </div>
             </div>
             <button type="button" class="btn btn-info pull-right" id="btnAgregar">Agregar</button>
+            <button type="button" class="btn btn-info pull-right" id="btnEditar">Agregar</button>
         </div>
         <div class="mt-5">
             <table class="table table-bordered">
@@ -64,8 +66,8 @@
             </table>
         </div>
         <div class="btn-group pull-right">
-            <a asp-action="Index" asp-controller="Home" class="btn btn-danger pull-right">Cancelar</a>&nbsp;
-            <button class="btn btn-primary pull-right">Guardar</button>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-success pull-right">Regresar</a>&nbsp;
+            <button class="btn btn-primary pull-right" id="btnGuardar">Guardar</button>
         </div>
     </div>
 </div>

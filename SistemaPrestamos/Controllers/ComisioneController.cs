@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SistemaPrestamos.Context;
+using SistemaPrestamos.Models;
 using SistemaPrestamos.Models.DTOs;
 using SistemaPrestamos.Utilidad;
 using System;
@@ -27,12 +28,25 @@ namespace SistemaPrestamos.Controllers
             var cliente = context.Clientes.FirstOrDefault(x => x.Cedula.Equals("NODEFINIDO"));
             if (cliente is null) return NotFound();
             var prestamos = context.Prestamos.Where(x => x.EstadoPrestamo.Equals(Helper.ESTADOPRESTAMO.PAGADO.ToString()) && x.EstadoComision.Equals(Helper.ESTADOCOMISION.PENDIENTE.ToString())).ToList();
-            return View(new PrestamoDTO { Nombre = cliente.Nombre, Prestamos = prestamos });
+            return View(new ComisionDTO { Id = cliente.Id, Nombre = cliente.Nombre, Prestamos = prestamos });
         }
 
         public JsonResult ObtenerMontoDePrestamoPorId(int id)
         {
-            return Json(context.Prestamos.Select(x=> new {x.Id, x.Monto, x.EstadoComision }).FirstOrDefault(x => x.Id.Equals(id)));
+            return Json(context.Prestamos.Select(x => new { x.Id, x.Monto, x.EstadoComision }).FirstOrDefault(x => x.Id.Equals(id)));
+        }
+
+        public async Task<JsonResult> GuardarComision(List<ComisionDTO> comisionDTO)
+        {
+            var comisiones = mapper.Map<List<Comisione>>(comisionDTO);
+            await context.Comisiones.AddRangeAsync(comisiones);
+            foreach (var item in comisiones)
+            {
+                var prestamo = await context.Prestamos.FirstOrDefaultAsync(x => x.Id.Equals(item.PrestamoId));
+                prestamo.EstadoComision = Helper.ESTADOCOMISION.PAGADO.ToString();
+            }
+            int save = await context.SaveChangesAsync();
+            return Json(new { Data = save });
         }
     }
 }
