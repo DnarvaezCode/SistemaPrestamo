@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dnarvaez\\source\\repos\\SistemaPrestamos\\SistemaPrestamos\\SistemaPrestamos.csproj": {}
+    "C:\\Users\\1234\\source\\repos\\SistemaPrestamo\\SistemaPrestamos\\SistemaPrestamos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dnarvaez\\source\\repos\\SistemaPrestamos\\SistemaPrestamos\\SistemaPrestamos.csproj": {
+    "C:\\Users\\1234\\source\\repos\\SistemaPrestamo\\SistemaPrestamos\\SistemaPrestamos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dnarvaez\\source\\repos\\SistemaPrestamos\\SistemaPrestamos\\SistemaPrestamos.csproj",
+        "projectUniqueName": "C:\\Users\\1234\\source\\repos\\SistemaPrestamo\\SistemaPrestamos\\SistemaPrestamos.csproj",
         "projectName": "SistemaPrestamos",
-        "projectPath": "C:\\Users\\Dnarvaez\\source\\repos\\SistemaPrestamos\\SistemaPrestamos\\SistemaPrestamos.csproj",
-        "packagesPath": "C:\\Users\\Dnarvaez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dnarvaez\\source\\repos\\SistemaPrestamos\\SistemaPrestamos\\obj\\",
+        "projectPath": "C:\\Users\\1234\\source\\repos\\SistemaPrestamo\\SistemaPrestamos\\SistemaPrestamos.csproj",
+        "packagesPath": "C:\\Users\\1234\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1234\\source\\repos\\SistemaPrestamo\\SistemaPrestamos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dnarvaez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1234\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
