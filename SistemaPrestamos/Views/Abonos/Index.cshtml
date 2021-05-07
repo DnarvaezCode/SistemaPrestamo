@@ -38,7 +38,7 @@
                 <div class="form-group col-md-6">
                         <label>Monto abono</label>
                         <input asp-for="IdPrestamo" type="hidden" />
-                        <input asp-for="Monto" type="number" class="form-control" min="@Model.Minimo" max="@Model.Maximo" readonly="@Model.Pagado"/>
+                        <input asp-for="Monto" type="number" class="form-control" min="@Model.Minimo" readonly="@Model.Pagado"/>
                 </div>
             </div>
             <div class="modal-footer">

@@ -47,16 +47,18 @@ namespace SistemaPrestamos.Services.Abonos
             var saldo = mprestamo - pagado;
             var interes = await CalculaInteres(abono);
 
-            var abonoCapital = abono.Monto > saldo ? saldo : (abono.Monto - abono.Interes);
-            var abonoInteres = abono.Monto > saldo ? interes + (abono.Monto - saldo) : interes;
+            var abonoCapital = abono.Monto > saldo + interes ? saldo : (abono.Monto - interes);
+            var abonoInteres = abono.Monto > saldo + interes ? interes + (abono.Monto - saldo) : interes;
             abono.Capital = abonoCapital;
             abono.Interes = abonoInteres;
 
             abono.Fecha = DateTime.Now;
             _context.Abonos.Add(abono);
             await _context.SaveChangesAsync();
-            
-            prestamo.EstadoPrestamo = prestamo.Monto == pagado + abono.Capital ? ESTADOPRESTAMO.PAGADO.ToString() : ESTADOPRESTAMO.PROCESOPAGO.ToString();
+
+            var pagadoTotal = _context.Abonos.Where(x => x.PrestamoId == abono.PrestamoId).Sum(s => s.Capital);
+            prestamo.EstadoPrestamo = prestamo.Monto == pagadoTotal ? ESTADOPRESTAMO.PAGADO.ToString() : ESTADOPRESTAMO.PROCESOPAGO.ToString();
+            prestamo.EstadoComision = prestamo.EstadoPrestamo == ESTADOPRESTAMO.PAGADO.ToString() ? ESTADOPRESTAMO.PENDIENTE.ToString() : null;
             await _context.SaveChangesAsync();
             return abono;
         }

@@ -58,9 +58,9 @@ namespace SistemaPrestamos.Controllers
             modelo.Saldo = (modelo.Prestamo - modelo.Abonos.Sum(x => x.Capital)).ToString("F");
             modelo.Pagado = _context.Prestamos.FirstOrDefault(x => x.Id == IdPrestamo).Monto == modelo.Abonos.Sum(s => s.Capital);
 
-            modelo.Minimo = (float)Math.Round(await _ServiceAbonos.CalculaInteres(new Models.Abono { PrestamoId = IdPrestamo, Monto = 0 }));
-            modelo.Maximo = (float)Math.Round((modelo.Prestamo - modelo.Abonos.Sum(x => x.Capital)) + (await _ServiceAbonos.CalculaInteres(new Models.Abono { PrestamoId = IdPrestamo, Monto = 0 })));
-            modelo.Monto = (float)Math.Round((decimal)modelo.Minimo);
+            modelo.Minimo = (float)Math.Ceiling(await _ServiceAbonos.CalculaInteres(new Models.Abono { PrestamoId = IdPrestamo, Monto = 0 }));
+            modelo.Maximo = (float)Math.Ceiling((modelo.Prestamo - modelo.Abonos.Sum(x => x.Capital)) + (await _ServiceAbonos.CalculaInteres(new Models.Abono { PrestamoId = IdPrestamo, Monto = 0 })));
+            modelo.Monto = (float)Math.Ceiling((decimal)modelo.Minimo);
             return View(modelo);
         }
 
