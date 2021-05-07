@@ -1,0 +1,111 @@
+﻿@model AbonosViewModels
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card" style="margin-top:30px">
+    <div class="card-header bg-dark text-light ml-0 row container">
+        <div class="col-md-6">
+            <i class="fa fa-list-ul"></i>&nbsp;Abonos
+        </div>
+    </div>
+    <div class="card-body">
+        <form asp-action="Abonar">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Monto prestamo</label>
+                    <input asp-for="Prestamo" class="form-control" readonly />
+                </div>
+                <div class="form-group col-md-4">
+
+                    <label>Cliente</label>
+                    <input asp-for="Cliente" class="form-control" readonly />
+
+                </div>
+                <div class="form-group col-md-4">
+
+                    <label>Saldo</label>
+                    <input asp-for="Saldo" class="form-control" readonly/>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                        <label>Fecha prestamo</label>
+                        <input asp-for="Fecha" class="form-control" readonly/>
+                </div>
+                <div class="form-group col-md-6">
+                        <label>Monto abono</label>
+                        <input asp-for="IdPrestamo" type="hidden" />
+                        <input asp-for="Monto" type="number" class="form-control" min="@Model.Minimo" max="@Model.Maximo" readonly="@Model.Pagado"/>
+                </div>
+            </div>
+            <div class="modal-footer">
+                @if (!Model.Pagado) {
+                <button type="submit" class="btn btn-primary">Abonar</button>
+                }
+            </div>
+        </form>
+    </div>
+</div>
+<div class="card" style="margin-top:30px">
+    <div class="card-header bg-dark text-light ml-0 row container">
+        <div class="col-md-6">
+            <i class="fa fa-list-ul"></i>&nbsp;Abonos
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Prestamo</th>
+                    <th>
+                        Abono
+                    </th>
+                    <th>
+                        Interes
+                    </th>
+                    <th>
+                        Capital
+                    </th>
+                    <th>
+                        Fecha abono
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Abonos)
+                {
+                    <tr>
+                        <td>
+                            @item.MontoPrestamo.ToString("F")
+                        </td>
+                        <td>
+                            @item.Abono.ToString("F")
+                        </td>
+                        <td>
+                            @item.Interes.ToString("F")
+                        </td>
+                        <td>
+                            @item.Capital.ToString("F")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fecha)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Totales</th>
+                    <th>@Model.Abonos.Sum(x => x.Abono).ToString("F")</th>
+                    <th>@Model.Abonos.Sum(x => x.Interes).ToString("F")</th>
+                    <th>@Model.Abonos.Sum(x => x.Capital).ToString("F")</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

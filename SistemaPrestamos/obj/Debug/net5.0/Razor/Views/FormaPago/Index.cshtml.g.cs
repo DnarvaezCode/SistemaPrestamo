@@ -26,8 +26,22 @@ using SistemaPrestamos.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\1234\source\repos\SistemaPrestamo\SistemaPrestamos\Views\_ViewImports.cshtml"
+using SistemaPrestamos.Models.DTOs;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\1234\source\repos\SistemaPrestamo\SistemaPrestamos\Views\_ViewImports.cshtml"
+using SistemaPrestamos.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ab55e55f2fef681c9dd797a4c84d98213027274f", @"/Views/FormaPago/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"21a8dc00bc975a63080e0c7883eff91522a60813", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fceec51b4d7ee2558c2fe8555c81b9a5656f9182", @"/Views/_ViewImports.cshtml")]
     public class Views_FormaPago_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<SistemaPrestamos.Models.DTOs.FormaPagoDTO>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -79,7 +93,7 @@ using SistemaPrestamos.Models;
         </div>
         <div class=""col-md-6 text-right"">
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab55e55f2fef681c9dd797a4c84d98213027274f6678", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab55e55f2fef681c9dd797a4c84d98213027274f7083", async() => {
                 WriteLiteral("<i class=\"fa fa-plus\"></i>");
             }
             );
@@ -159,7 +173,7 @@ WriteAttributeValue(" ", 1267, item.Estado ? "badge-success": "badge-danger", 12
 #line hidden
 #nullable disable
             WriteLiteral("</span></td>\r\n                                <td>\r\n                                    <div class=\"btn-group\">\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab55e55f2fef681c9dd797a4c84d98213027274f11028", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab55e55f2fef681c9dd797a4c84d98213027274f11433", async() => {
                 WriteLiteral("<i class=\"fa fa-pencil\"></i>");
             }
             );
@@ -192,7 +206,7 @@ WriteAttributeValue(" ", 1267, item.Estado ? "badge-success": "badge-danger", 12
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab55e55f2fef681c9dd797a4c84d98213027274f13441", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab55e55f2fef681c9dd797a4c84d98213027274f13846", async() => {
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
             }
             );

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PrestamosDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card" style="margin-top:30px">
+    <div class="card-header bg-dark text-light ml-0 row container">
+        <div class="col-md-6">
+            <i class="fa fa-list-ul"></i>&nbsp;Clientes
+        </div>
+        <div class="col-md-6 text-right">
+            <a asp-action="Create" asp-controller="Prestamo" class="btn btn-primary btn-sm text-white"><i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Código </th>
+                    <th>Fecha Prestamo </th>
+                    <th>Cliente</th>
+                    <th>Monto</th>
+                    <th>Interes</th>
+                    <th>Interes ganado</th>
+                    <th>Capital abonado</th>
+                    <th>Estado prestamo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @item.Codigo
+                    </td>
+                    <td>
+                        @item.Fecha
+                    </td>
+                    <td>
+                        @item.Cliente
+                    </td>
+                    <td>
+                        @item.Monto.ToString("F")
+                    </td>
+                    <td>
+                        @item.Tasa %
+                    </td>
+                    <td>
+                        @item.AbonadoInteres.ToString("F")
+                    </td>
+                    <td>
+                        @item.AbonadoCapital.ToString("F")
+                    </td>
+                    <td>
+                        @item.Estado
+                    </td>
+                    <td>
+                        <a asp-action="Index" asp-controller="Abonos" asp-route-IdPrestamo="@item.IdPrestamo" title="Abonos"
+                           class="btn btn-info btn-sm text-white"><i class="fa fa-pencil"></i></a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

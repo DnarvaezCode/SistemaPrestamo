@@ -8,6 +8,8 @@ using Microsoft.Extensions.Hosting;
 using SistemaPrestamos.Context;
 using SistemaPrestamos.Models;
 using SistemaPrestamos.Models.DTOs;
+using SistemaPrestamos.Services.Abonos;
+using SistemaPrestamos.Services.Prestamos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +38,11 @@ namespace SistemaPrestamos
                 configuration.CreateMap<FormaPagoDTO, FormaPago>();
                 configuration.CreateMap<Comisione, ComisionDTO>();
                 configuration.CreateMap<ComisionDTO, Comisione>();
+                configuration.CreateMap<Prestamo, PrestamosDTO>().ReverseMap();
             }, typeof(Startup));
+
+            services.AddTransient<IPrestamos, ServicePrestamo>();
+            services.AddTransient<IServiceAbonos, ServiceAbonos>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
