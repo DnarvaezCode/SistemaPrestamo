@@ -842,3 +842,4 @@ C:\Users\1234\source\repos\SistemaPrestamo\SistemaPrestamos\bin\Debug\net5.0\run
 C:\Users\1234\source\repos\SistemaPrestamo\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Prestamo\Index.cshtml.g.cs
 C:\Users\1234\source\repos\SistemaPrestamo\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Prestamo\Create.cshtml.g.cs
 C:\Users\1234\source\repos\SistemaPrestamo\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\Abonos\Index.cshtml.g.cs
+C:\Users\1234\source\repos\SistemaPrestamo\SistemaPrestamos\obj\Debug\net5.0\Razor\Views\IngresosEgresos\Index.cshtml.g.cs

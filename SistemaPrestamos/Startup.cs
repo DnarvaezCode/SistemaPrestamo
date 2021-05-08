@@ -9,6 +9,7 @@ using SistemaPrestamos.Context;
 using SistemaPrestamos.Models;
 using SistemaPrestamos.Models.DTOs;
 using SistemaPrestamos.Services.Abonos;
+using SistemaPrestamos.Services.IngresosEgresos;
 using SistemaPrestamos.Services.Prestamos;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,7 @@ namespace SistemaPrestamos
 
             services.AddTransient<IPrestamos, ServicePrestamo>();
             services.AddTransient<IServiceAbonos, ServiceAbonos>();
+            services.AddTransient<IServiceIngresoEgreso, ServiceIngresoEgreso>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 

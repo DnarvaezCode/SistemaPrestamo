@@ -1,0 +1,97 @@
+﻿@model List<IngresosEgresosDTO>
+@{
+    ViewData["Title"] = "View";
+}
+
+
+<div class="card" style="margin-top:30px">
+    <div class="card-header bg-dark text-light ml-0 row container">
+        <div class="col-md-6">
+            <i class="fa fa-list-ul"></i>&nbsp;Ingresos y Egresos
+        </div>
+        <div class="col-md-6 text-right">
+            <a asp-action="Create" asp-controller="Prestamo" class="btn btn-primary btn-sm text-white"><i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Código prestamo</th>
+                    <th>Cliente</th>
+                    <th>Monto</th>
+                    <th>Interes %</th>
+                    <th>Interes ganado</th>
+
+                    <th>Comisión</th>
+                    <th>% Comisión</th>
+                    <th>Cliente Comisión</th>
+                    <th>Interes real ganado</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Codigo</td>
+                        <td>@item.ClientePrestamo</td>
+                        <td>@item.MontoPrestamo</td>
+                        <td>@item.Interes%</td>
+                        <td>@item.InteresGanado.ToString("F")</td>
+                        <td>@item.MontoComisionPago.ToString("F")</td>
+                        <td>@item.PorcentajeComisionPAgo%</td>
+                        <td>@item.ClienteComision</td>
+                        <td>@{var result = (item.InteresGanado - item.MontoComisionPago).ToString("F"); @result}</td>
+                    </tr>
+                    @if (item.Abonos.Any())
+                    {
+                        <tr>
+                            <td>
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Abono</th>
+                                            <th>Interes</th>
+                                            <th>Fecha</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var abonos in item.Abonos)
+                                        {
+                                            <tr><td>@abonos.Abono.ToString("F")</td><td>@abonos.Interes.ToString("F")</td><td>@abonos.Fecha</td></tr>
+                                        }
+                                    </tbody>
+                                    <tfoot>
+                                        <tr><th>@item.Abonos.Sum(x => x.Abono).ToString("F")</th> <th>@item.Abonos.Sum(x => x.Interes).ToString("F")</th></tr>
+                                    </tfoot>
+                                </table>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>Total gando sin comisión</td>
+                    <td>@Model.Sum(x => x.InteresGanado).ToString("F")</td>
+                    <td>Total comisión pagada</td>
+                    <td>@Model.Sum(x => x.MontoComisionPago).ToString("F")<td>
+                    <td></td>
+                    <td></td>
+                    <td>Total ganado</td>
+                    <td>@{ 
+
+                        var totalIGanado = Model.Sum(x => x.InteresGanado);
+                        var totalMontoComisionPago = Model.Sum(x => x.MontoComisionPago);
+
+                        var resultTGanado = (totalIGanado - totalMontoComisionPago).ToString("F");
+                        @resultTGanado
+                    }</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
